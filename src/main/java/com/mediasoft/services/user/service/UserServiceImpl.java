@@ -32,7 +32,9 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public void addRoleToUser(String username, String roleName) {
-
+        User user = userRepo.findByUsername(username);
+        Role role = roleRepo.findByName(roleName);
+        user.getRoles().add(role);
     }
 
     @Override
