@@ -22,7 +22,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public User saveUser(User user) {
-        return null;
+        return userRepo.save(user);
     }
 
     @Override
