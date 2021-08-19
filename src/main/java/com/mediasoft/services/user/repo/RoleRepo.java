@@ -1,5 +1,6 @@
-package com.mediasoft.services.user.domain;
+package com.mediasoft.services.user.repo;
 
+import com.mediasoft.services.user.domain.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
