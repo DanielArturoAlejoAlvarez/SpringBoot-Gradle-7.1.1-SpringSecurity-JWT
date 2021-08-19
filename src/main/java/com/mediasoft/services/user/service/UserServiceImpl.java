@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService{
 
     @Override
     public Role saveRole(Role role) {
-        return null;
+        return roleRepo.save(role);
     }
 
     @Override
