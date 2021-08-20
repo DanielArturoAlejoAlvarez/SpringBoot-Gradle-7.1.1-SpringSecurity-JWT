@@ -40,3 +40,8 @@ public class UserResource {
 
 }
 
+@Data
+class RoleToUserForm {
+    private String username;
+    private String roleName;
+}
