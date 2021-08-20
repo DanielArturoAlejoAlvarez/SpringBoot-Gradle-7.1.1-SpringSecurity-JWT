@@ -4,9 +4,7 @@ import com.mediasoft.services.user.domain.User;
 import com.mediasoft.services.user.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -20,5 +18,10 @@ public class UserResource {
     @GetMapping("/users")
     public ResponseEntity<List<User>> getUsers() {
         return ResponseEntity.ok().body(userService.getUsers());
+    }
+
+    @PostMapping("/user/save")
+    public ResponseEntity<User> saveUser(@RequestBody User user) {
+        return ResponseEntity.ok().body(userService.saveUser(user));
     }
 }
