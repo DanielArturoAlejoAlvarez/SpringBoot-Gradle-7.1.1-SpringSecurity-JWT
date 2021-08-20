@@ -1,5 +1,6 @@
 package com.mediasoft.services.user.api;
 
+import com.mediasoft.services.user.domain.Role;
 import com.mediasoft.services.user.domain.User;
 import com.mediasoft.services.user.service.UserService;
 import lombok.RequiredArgsConstructor;
@@ -23,5 +24,10 @@ public class UserResource {
     @PostMapping("/user/save")
     public ResponseEntity<User> saveUser(@RequestBody User user) {
         return ResponseEntity.ok().body(userService.saveUser(user));
+    }
+
+    @PostMapping("/role/save")
+    public ResponseEntity<Role> saveRole(@RequestBody Role role) {
+        return ResponseEntity.ok().body(userService.saveRole(role));
     }
 }
