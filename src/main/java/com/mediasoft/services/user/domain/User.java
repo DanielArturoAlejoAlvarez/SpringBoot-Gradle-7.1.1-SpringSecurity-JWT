@@ -7,13 +7,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
 @Entity
 @Data
 @AllArgsConstructor @NoArgsConstructor
-@Builder
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,7 +28,9 @@ public class User {
     @Column(length = 512)
     private String avatar;
     private Boolean status;
-    private Collection<Role> roles;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Collection<Role> roles = new ArrayList<>();
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "created_at")
