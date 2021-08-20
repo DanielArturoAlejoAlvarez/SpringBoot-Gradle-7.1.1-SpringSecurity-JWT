@@ -1,0 +1,16 @@
+server:
+  error:
+    include-message: always
+spring:
+  datasource:
+    password: pass123
+    url: jdbc:postgresql://127.0.0.1:5432/user_service
+    username: postgres
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
