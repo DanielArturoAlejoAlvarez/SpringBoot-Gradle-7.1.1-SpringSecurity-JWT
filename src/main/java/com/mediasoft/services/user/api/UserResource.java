@@ -3,7 +3,7 @@ package com.mediasoft.services.user.api;
 import com.mediasoft.services.user.domain.Role;
 import com.mediasoft.services.user.domain.User;
 import com.mediasoft.services.user.service.UserService;
-import lombok.Data;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -44,8 +44,5 @@ public class UserResource {
 
 }
 
-@Data
-class RoleToUserForm {
-    private String username;
-    private String roleName;
-}
+
+
