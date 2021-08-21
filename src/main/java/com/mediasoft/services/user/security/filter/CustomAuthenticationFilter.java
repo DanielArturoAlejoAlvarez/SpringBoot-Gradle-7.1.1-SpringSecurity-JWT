@@ -1,4 +1,4 @@
-package com.mediasoft.services.user.security;
+package com.mediasoft.services.user.security.filter;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
